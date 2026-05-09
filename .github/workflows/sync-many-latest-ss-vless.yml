@@ -18,7 +18,7 @@ jobs:
       - name: Config
         run: |
           echo "LOCAL_SAVE=many-ss-veless-nodes-latest" >> $GITHUB_ENV
-          echo "SOURCE_FILE=clash-sources.list" >> $GITHUB_ENV
+          echo "SOURCE_FILE=ss-veless-sources.list" >> $GITHUB_ENV
 
       - name: Get date
         run: |
