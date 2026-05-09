@@ -25,7 +25,7 @@ jobs:
           echo "TODAY=$(date +%Y%m%d)" >> $GITHUB_ENV
           echo "YESTERDAY=$(date -d '1 day ago' +%Y%m%d)" >> $GITHUB_ENV
 
-      - name: Download and merge all sources from list
+      - name: Download and merge all sources
         run: |
           LOCAL_SAVE=${{ env.LOCAL_SAVE }}
           SOURCE_FILE=${{ env.SOURCE_FILE }}
@@ -39,18 +39,17 @@ jobs:
             echo "====================================="
             echo "Processing: $repo"
 
-            # 替换 {date} 为今天/昨天日期
             file_today="${file_pattern//\{date\}/$TODAY}"
             file_yesterday="${file_pattern//\{date\}/$YESTERDAY}"
-
             url_today="https://raw.githubusercontent.com/$repo/$branch/$path/$file_today"
             url_yesterday="https://raw.githubusercontent.com/$repo/$branch/$path/$file_yesterday"
 
-            if curl -L -f -s "$url_today" >> "$LOCAL_SAVE"; then
-              echo "✅ Used today: $file_today"
+            if curl -L -f -s --connect-timeout 10 "$url_today" >> "$LOCAL_SAVE"; then
+              echo "✅ $repo 使用今日文件: $file_today"
+            elif curl -L -f -s --connect-timeout 10 "$url_yesterday" >> "$LOCAL_SAVE"; then
+              echo "✅ $repo 使用昨日文件: $file_yesterday"
             else
-              curl -L -f -s "$url_yesterday" >> "$LOCAL_SAVE"
-              echo "✅ Used yesterday: $file_yesterday"
+              echo "⚠️ $repo 今日/昨日文件都不存在，跳过"
             fi
 
             echo "" >> "$LOCAL_SAVE"
@@ -64,5 +63,5 @@ jobs:
       - name: Commit & Push
         run: |
           git add .
-          git commit -m "Auto update clash from sources.list"
+          git commit -m "Auto update clash nodes"
           git push
