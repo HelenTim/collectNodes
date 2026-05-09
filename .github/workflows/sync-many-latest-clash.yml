@@ -1,4 +1,4 @@
-name: Sync many Latest Clash YML
+name: Sync Latest Clash YML
 on:
   schedule:
     - cron: "0 0 * * *"  # 北京时间 每天早8点
@@ -17,7 +17,7 @@ jobs:
 
       - name: Config
         run: |
-          echo "LOCAL_SAVE=many-nodes-latest.yml" >> $GITHUB_ENV
+          echo "LOCAL_SAVE=nodes-latest.yml" >> $GITHUB_ENV
           echo "SOURCE_FILE=sources.list" >> $GITHUB_ENV
 
       - name: Get date
@@ -34,19 +34,23 @@ jobs:
 
           > "$LOCAL_SAVE"
 
-          while IFS=, read -r repo branch path || [ -n "$repo" ]; do
+          while IFS=, read -r repo branch path file_pattern || [ -n "$repo" ]; do
             [[ "$repo" =~ ^# ]] || [ -z "$repo" ] && continue
             echo "====================================="
             echo "Processing: $repo"
 
-            URL1="https://raw.githubusercontent.com/$repo/$branch/$path/clash$TODAY.yml"
-            URL2="https://raw.githubusercontent.com/$repo/$branch/$path/clash$YESTERDAY.yml"
+            # 替换 {date} 为今天/昨天日期
+            file_today="${file_pattern//\{date\}/$TODAY}"
+            file_yesterday="${file_pattern//\{date\}/$YESTERDAY}"
 
-            if curl -L -f -s "$URL1" >> "$LOCAL_SAVE"; then
-              echo "✅ Used today: clash$TODAY.yml"
+            url_today="https://raw.githubusercontent.com/$repo/$branch/$path/$file_today"
+            url_yesterday="https://raw.githubusercontent.com/$repo/$branch/$path/$file_yesterday"
+
+            if curl -L -f -s "$url_today" >> "$LOCAL_SAVE"; then
+              echo "✅ Used today: $file_today"
             else
-              curl -L -f -s "$URL2" >> "$LOCAL_SAVE"
-              echo "✅ Used yesterday: clash$YESTERDAY.yml"
+              curl -L -f -s "$url_yesterday" >> "$LOCAL_SAVE"
+              echo "✅ Used yesterday: $file_yesterday"
             fi
 
             echo "" >> "$LOCAL_SAVE"
