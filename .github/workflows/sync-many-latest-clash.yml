@@ -1,0 +1,64 @@
+name: Sync many Latest Clash YML
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 北京时间 每天早8点
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Config
+        run: |
+          echo "LOCAL_SAVE=many-nodes-latest.yml" >> $GITHUB_ENV
+          echo "SOURCE_FILE=sources.list" >> $GITHUB_ENV
+
+      - name: Get date
+        run: |
+          echo "TODAY=$(date +%Y%m%d)" >> $GITHUB_ENV
+          echo "YESTERDAY=$(date -d '1 day ago' +%Y%m%d)" >> $GITHUB_ENV
+
+      - name: Download and merge all sources from list
+        run: |
+          LOCAL_SAVE=${{ env.LOCAL_SAVE }}
+          SOURCE_FILE=${{ env.SOURCE_FILE }}
+          TODAY=${{ env.TODAY }}
+          YESTERDAY=${{ env.YESTERDAY }}
+
+          > "$LOCAL_SAVE"
+
+          while IFS=, read -r repo branch path || [ -n "$repo" ]; do
+            [[ "$repo" =~ ^# ]] || [ -z "$repo" ] && continue
+            echo "====================================="
+            echo "Processing: $repo"
+
+            URL1="https://raw.githubusercontent.com/$repo/$branch/$path/clash$TODAY.yml"
+            URL2="https://raw.githubusercontent.com/$repo/$branch/$path/clash$YESTERDAY.yml"
+
+            if curl -L -f -s "$URL1" >> "$LOCAL_SAVE"; then
+              echo "✅ Used today: clash$TODAY.yml"
+            else
+              curl -L -f -s "$URL2" >> "$LOCAL_SAVE"
+              echo "✅ Used yesterday: clash$YESTERDAY.yml"
+            fi
+
+            echo "" >> "$LOCAL_SAVE"
+          done < "$SOURCE_FILE"
+
+      - name: Git config
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit & Push
+        run: |
+          git add .
+          git commit -m "Auto update clash from sources.list"
+          git push
