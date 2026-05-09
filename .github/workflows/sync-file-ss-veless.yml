@@ -1,0 +1,67 @@
+name: Sync many Latest Clash YML
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 北京时间 每天早8点
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Config
+        run: |
+          echo "LOCAL_SAVE=many-ss-veless-nodes-latest" >> $GITHUB_ENV
+          echo "SOURCE_FILE=clash-sources.list" >> $GITHUB_ENV
+
+      - name: Get date
+        run: |
+          echo "TODAY=$(date +%Y%m%d)" >> $GITHUB_ENV
+          echo "YESTERDAY=$(date -d '1 day ago' +%Y%m%d)" >> $GITHUB_ENV
+
+      - name: Download and merge all sources
+        run: |
+          LOCAL_SAVE=${{ env.LOCAL_SAVE }}
+          SOURCE_FILE=${{ env.SOURCE_FILE }}
+          TODAY=${{ env.TODAY }}
+          YESTERDAY=${{ env.YESTERDAY }}
+
+          > "$LOCAL_SAVE"
+
+          while IFS=, read -r repo branch path file_pattern || [ -n "$repo" ]; do
+            [[ "$repo" =~ ^# ]] || [ -z "$repo" ] && continue
+            echo "====================================="
+            echo "Processing: $repo"
+
+            file_today="${file_pattern//\{date\}/$TODAY}"
+            file_yesterday="${file_pattern//\{date\}/$YESTERDAY}"
+            url_today="https://raw.githubusercontent.com/$repo/$branch/$path/$file_today"
+            url_yesterday="https://raw.githubusercontent.com/$repo/$branch/$path/$file_yesterday"
+
+            if curl -L -f -s --connect-timeout 10 "$url_today" >> "$LOCAL_SAVE"; then
+              echo "✅ $repo 使用今日文件: $file_today"
+            elif curl -L -f -s --connect-timeout 10 "$url_yesterday" >> "$LOCAL_SAVE"; then
+              echo "✅ $repo 使用昨日文件: $file_yesterday"
+            else
+              echo "⚠️ $repo 今日/昨日文件都不存在，跳过"
+            fi
+
+            echo "" >> "$LOCAL_SAVE"
+          done < "$SOURCE_FILE"
+
+      - name: Git config
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit & Push
+        run: |
+          git add .
+          git commit -m "Auto update clash nodes"
+          git push
