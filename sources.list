@@ -1,1 +1,2 @@
-free-nodes/clashfree,main,.
+free-nodes/clashfree,main,.,clash{date}.yml
+free-nodes/v2rayfree,main,.,v{date}
