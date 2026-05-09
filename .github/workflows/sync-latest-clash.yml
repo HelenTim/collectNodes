@@ -1,0 +1,38 @@
+name: Sync Latest Clash File By Date
+on:
+  schedule:
+    - cron: "0 2 * * *"  # 每天 UTC 2点 运行（中国时间10点）
+  workflow_dispatch:     # 允许手动点一下运行
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repo
+        uses: actions/checkout@v4
+
+      # ========== 你只需要改下面 3 行配置 ==========
+      - name: Set config
+        run: |
+          echo "USER_REPO=free-nodes/clashfree" >> $GITHUB_ENV    # 对方仓库
+          echo "FILE_DIR=." >> $GITHUB_ENV         # 文件所在文件夹，没有就填 .
+          echo "TARGET_FILE=latest-jiedian.yml" >> $GITHUB_ENV  # 你项目里的文件名
+      # ============================================
+
+      # 自动获取今天日期 YYYYMMDD
+      - name: Get today's date
+        run: echo "TODAY=$(date +%Y%m%d)" >> $GITHUB_ENV
+
+      # 下载最新日期的 clash 文件
+      - name: Download latest clash file
+        run: |
+          URL="https://raw.githubusercontent.com/${USER_REPO}/main/${FILE_DIR}/clash${TODAY}.yml"
+          echo "Downloading: $URL"
+          curl -L -f -o ${{ env.TARGET_FILE }} $URL
+
+      # 有变化就自动提交
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "auto-update latest clash file"
+          branch: main
