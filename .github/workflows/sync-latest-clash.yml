@@ -1,7 +1,7 @@
 name: Sync Latest Clash File By Date
 on:
   schedule:
-    - cron: "0 22 * * *"  # 每天 UTC 2点 运行（中国时间10点）
+    - cron: "0 0 * * *"  # 每天 UTC 0点 运行（中国时间8点）
   workflow_dispatch:     # 允许手动点一下运行
 
 jobs:
