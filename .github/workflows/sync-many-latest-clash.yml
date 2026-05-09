@@ -1,4 +1,4 @@
-name: Sync Latest Clash YML
+name: Sync many Latest Clash YML
 on:
   schedule:
     - cron: "0 0 * * *"  # 北京时间 每天早8点
