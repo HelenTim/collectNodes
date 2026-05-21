@@ -37,10 +37,10 @@ jobs:
             link="${link//\{year\}/${{ steps.date.outputs.Y }}}"
             link="${link//\{month\}/${{ steps.date.outputs.m }}}"
             link="${link//\{0-month\}/${{ steps.date.outputs.mm }}}"
-            link="${link//\{0day\}/${{ steps.date.outputs.dd }}}"
+            link="${link//\{0-day\}/${{ steps.date.outputs.dd }}}"
             link="${link//\{day\}/${{ steps.date.outputs.d }}}"
             link="${link//\{year\}\{month\}\{day\}/${{ steps.date.outputs.Ymd }}}"
-            link="${link//\{0-year\}\{0-month\}\{0day\}/${{ steps.date.outputs.Ymmdd }}}"
+            link="${link//\{0-year\}\{0-month\}\{0-day\}/${{ steps.date.outputs.Ymmdd }}}"
 
             echo "$link" >> many-daily-clash-nodes-latest
           done < daily-source.list
