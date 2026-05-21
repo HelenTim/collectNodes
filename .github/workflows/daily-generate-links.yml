@@ -1,8 +1,8 @@
-name: 每日自动生成 Clash 节点链接（精准模板版）
+name: 每日自动生成 Clash 节点链接
 on:
   schedule:
-    - cron: '0 8 * * *'  # 每天早8点
-  workflow_dispatch:     # 手动测试
+    - cron: '0 8 * * *'  # 每天早8点执行
+  workflow_dispatch:     # 支持手动测试
 
 jobs:
   build:
@@ -14,38 +14,40 @@ jobs:
       - name: 拉取仓库代码
         uses: actions/checkout@v4
 
-      - name: 预生成所有日期格式
+      # 实时获取当前日期（无写死，自动运行）
+      - name: 实时生成日期变量
         id: date
         run: |
-          echo "Y=2026" >> $GITHUB_OUTPUT          # 年
-          echo "m=5" >> $GITHUB_OUTPUT            # 月不补零
-          echo "d=9" >> $GITHUB_OUTPUT            # 日不补零
-          echo "mm=05" >> $GITHUB_OUTPUT          # 月补零
-          echo "dd=09" >> $GITHUB_OUTPUT          # 日补零
-          echo "Ymd=202659" >> $GITHUB_OUTPUT     # 完整不补零
-          echo "Ymmdd=20260509" >> $GITHUB_OUTPUT # 完整补零
+          echo "Y=$(date +%Y)" >> $GITHUB_OUTPUT            # 年：2026
+          echo "m=$(date +%-m)" >> $GITHUB_OUTPUT           # 月不补零：5
+          echo "d=$(date +%-d)" >> $GITHUB_OUTPUT           # 日不补零：9
+          echo "mm=$(date +%m)" >> $GITHUB_OUTPUT          # 月补零：05
+          echo "dd=$(date +%d)" >> $GITHUB_OUTPUT          # 日补零：09
+          echo "Ymd=$(date +%Y%-m%-d)" >> $GITHUB_OUTPUT    # 完整不补零：202659
+          echo "Ymmdd=$(date +%Y%m%d)" >> $GITHUB_OUTPUT   # 完整补零：20260509
 
-      - name: 按模板生成链接
+      # 按模板生成链接
+      - name: 生成最终链接
         run: |
           > many-daily-clash-nodes-latest
-          # 逐行读取：基础链接 日期模板
-          while read -r base pattern || [ -n "$base" ]; do
-            [[ -z "$base" || "$base" == \#* ]] && continue
-
-            # 替换你要的 4 种模板（精准匹配）
-            link="$base"
+          while IFS= read -r line || [ -n "$line" ]; do
+            [[ -z "$line" || "$line" == \#* ]] && continue
+            
+            link="$line"
+            # 替换变量
             link="${link//\{year\}/${{ steps.date.outputs.Y }}}"
             link="${link//\{month\}/${{ steps.date.outputs.m }}}"
             link="${link//\{0-month\}/${{ steps.date.outputs.mm }}}"
-            link="${link//\{0-day\}/${{ steps.date.outputs.dd }}}"
             link="${link//\{day\}/${{ steps.date.outputs.d }}}"
+            link="${link//\{0day\}/${{ steps.date.outputs.dd }}}"
+            link="${link//\{0-year\}\{0-month\}\{0day\}/${{ steps.date.outputs.Ymmdd }}}"
             link="${link//\{year\}\{month\}\{day\}/${{ steps.date.outputs.Ymd }}}"
-            link="${link//\{0-year\}\{0-month\}\{0-day\}/${{ steps.date.outputs.Ymmdd }}}"
-
+            
             echo "$link" >> many-daily-clash-nodes-latest
           done < daily-source.list
 
-      - name: 提交更新到仓库
+      # 自动提交更新
+      - name: 提交并推送更新
         uses: EndBug/add-and-commit@v9
         with:
           message: "🤖 自动更新每日节点链接"
