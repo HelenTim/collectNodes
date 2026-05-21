@@ -1,9 +1,8 @@
-name: 每日自动生成 Clash 节点链接（完整版）
-
+name: 每日自动生成 Clash 节点链接（精准模板版）
 on:
   schedule:
     - cron: '0 8 * * *'  # 每天早8点
-  workflow_dispatch:     # 允许手动测试
+  workflow_dispatch:     # 手动测试
 
 jobs:
   build:
@@ -12,36 +11,38 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: 拉取仓库代码
         uses: actions/checkout@v4
 
-      - name: 获取日期变量
+      - name: 预生成所有日期格式
         id: date
         run: |
-          echo "year=$(date +%Y)" >> $GITHUB_OUTPUT
-          echo "month0=$(date +%m)" >> $GITHUB_OUTPUT   # 05
-          echo "month=$(date +%-m)" >> $GITHUB_OUTPUT  # 5
-          echo "day0=$(date +%d)" >> $GITHUB_OUTPUT    # 21
-          echo "day=$(date +%-d)" >> $GITHUB_OUTPUT    # 21
-          echo "date8=$(date +%Y%m%d)" >> $GITHUB_OUTPUT
+          echo "Y=2026" >> $GITHUB_OUTPUT          # 年
+          echo "m=5" >> $GITHUB_OUTPUT            # 月不补零
+          echo "d=9" >> $GITHUB_OUTPUT            # 日不补零
+          echo "mm=05" >> $GITHUB_OUTPUT          # 月补零
+          echo "dd=09" >> $GITHUB_OUTPUT          # 日补零
+          echo "Ymd=202659" >> $GITHUB_OUTPUT     # 完整不补零
+          echo "Ymmdd=20260509" >> $GITHUB_OUTPUT # 完整补零
 
-      - name: 读取配置并生成链接
+      - name: 按模板生成链接
         run: |
-          # 清空输出文件
           > many-daily-clash-nodes-latest
-
-          # 逐行读取：链接 月补零 日补零 后缀
-          while read -r base pad_m pad_d suffix || [ -n "$base" ]; do
-            # 跳过空行、注释行
+          # 逐行读取：基础链接 日期模板
+          while read -r base pattern || [ -n "$base" ]; do
             [[ -z "$base" || "$base" == \#* ]] && continue
 
-            # 选择月份
-            if [ "$pad_m" = "1" ]; then m=${{ steps.date.outputs.month0 }}; else m=${{ steps.date.outputs.month }}; fi
-            # 选择日期
-            if [ "$pad_d" = "1" ]; then d=${{ steps.date.outputs.day0 }}; else d=${{ steps.date.outputs.day }}; fi
+            # 替换你要的 4 种模板（精准匹配）
+            link="$base"
+            link="${link//\{year\}/${{ steps.date.outputs.Y }}}"
+            link="${link//\{month\}/${{ steps.date.outputs.m }}}"
+            link="${link//\{0-month\}/${{ steps.date.outputs.mm }}}"
+            link="${link//\{0day\}/${{ steps.date.outputs.dd }}}"
+            link="${link//\{day\}/${{ steps.date.outputs.d }}}"
+            link="${link//\{year\}\{month\}\{day\}/${{ steps.date.outputs.Ymd }}}"
+            link="${link//\{0-year\}\{0-month\}\{0day\}/${{ steps.date.outputs.Ymmdd }}}"
 
-            # 拼接最终链接
-            echo "${base}/${{ steps.date.outputs.year }}/${m}/${{ steps.date.outputs.date8 }}${suffix}" >> many-daily-clash-nodes-latest
+            echo "$link" >> many-daily-clash-nodes-latest
           done < daily-source.list
 
       - name: 提交更新到仓库
