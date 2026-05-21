@@ -1,8 +1,8 @@
-name: 每日自动生成 Clash 节点链接
+name: 每日自动生成并下载节点
 on:
   schedule:
-    - cron: '0 8 * * *'  # 每天早8点
-  workflow_dispatch:     # 手动测试
+    - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,7 +14,8 @@ jobs:
       - name: 拉取代码
         uses: actions/checkout@v4
 
-      - name: 实时获取日期（全自动）
+      # 1. 实时获取日期
+      - name: 获取日期变量
         id: date
         run: |
           echo "Y=$(date +%Y)" >> $GITHUB_OUTPUT
@@ -25,28 +26,53 @@ jobs:
           echo "Ymd=$(date +%Y%-m%-d)" >> $GITHUB_OUTPUT
           echo "Ymmdd=$(date +%Y%m%d)" >> $GITHUB_OUTPUT
 
-      - name: 生成完整链接（无任何变量残留）
+      # 2. 生成每日链接（你之前的模板功能完整保留）
+      - name: 生成每日链接
         run: |
           > many-daily-clash-nodes-latest
           while IFS= read -r line || [ -n "$line" ]; do
             [[ -z "$line" || "$line" == \#* ]] && continue
-
             link="$line"
-            # 全量替换所有模板（全覆盖，无遗漏）
+            
             link="${link//\{year\}/${{ steps.date.outputs.Y }}}"
             link="${link//\{month\}/${{ steps.date.outputs.m }}}"
             link="${link//\{0-month\}/${{ steps.date.outputs.mm }}}"
             link="${link//\{day\}/${{ steps.date.outputs.d }}}"
+            link="${link//\{0-day\}/${{ steps.date.outputs.dd }}}"
             link="${link//\{0day\}/${{ steps.date.outputs.dd }}}"
-            link="${link//\{0-day\}/${{ steps.date.outputs.dd }}}"  # 重点修复
             link="${link//\{0-year\}\{0-month\}\{0day\}/${{ steps.date.outputs.Ymmdd }}}"
             link="${link//\{year\}\{month\}\{day\}/${{ steps.date.outputs.Ymd }}}"
-
+            
             echo "$link" >> many-daily-clash-nodes-latest
           done < daily-source.list
 
+      # 3. 创建保存目录
+      - name: 创建 dailyNodes 文件夹
+        run: mkdir -p dailyNodes
+
+      # 4. 下载每个链接 → 保存为 域名.yaml
+      - name: 下载并保存节点文件
+        run: |
+          while IFS= read -r url || [ -n "$url" ]; do
+            [[ -z "$url" || "$url" == \#* ]] && continue
+
+            # 提取域名（例如 sfdr.zaixianyouxi.dpdns.org）
+            domain=$(echo "$url" | awk -F/ '{print $3}')
+            file="dailyNodes/${domain}.yaml"
+
+            echo "下载：$url"
+            echo "保存到：$file"
+
+            # 下载并覆盖写入
+            curl -fSL --connect-timeout 10 --max-time 20 "$url" -o "$file"
+
+          done < many-daily-clash-nodes-latest
+
+      # 5. 自动提交更新
       - name: 提交更新
         uses: EndBug/add-and-commit@v9
         with:
-          message: "🤖 自动更新每日节点链接"
-          add: "many-daily-clash-nodes-latest"
+          message: "🤖 自动更新每日节点链接 + 下载节点配置"
+          add: "many-daily-clash-nodes-latest dailyNodes/"
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
