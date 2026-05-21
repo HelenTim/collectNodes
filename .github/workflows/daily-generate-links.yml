@@ -1,55 +1,58 @@
-name: 每日自动生成 Clash 节点链接
+name: 每日自动生成 Clash 节点链接（带补零控制）
 
-# 定时触发：每天早上8点（UTC时间，对应北京时间8点就是0时区8点）
 on:
   schedule:
     - cron: '0 8 * * *'
-  # 允许手动触发测试
   workflow_dispatch:
 
 jobs:
   generate-link:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 允许提交修改到仓库
-    
-    steps:
-      - name: 拉取仓库代码
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+      contents: write
 
-      - name: 获取当前日期（年/月/日）
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 获取日期
         id: date
         run: |
           echo "year=$(date +%Y)" >> $GITHUB_OUTPUT
-          echo "month=$(date +%m)" >> $GITHUB_OUTPUT
-          echo "day=$(date +%d)" >> $GITHUB_OUTPUT
+          echo "month_zero=$(date +%m)" >> $GITHUB_OUTPUT    # 05
+          echo "month_nozero=$(date +%-m)" >> $GITHUB_OUTPUT # 5
+          echo "day_zero=$(date +%d)" >> $GITHUB_OUTPUT      # 21
+          echo "day_nozero=$(date +%-d)" >> $GITHUB_OUTPUT   # 21
           echo "full=$(date +%Y%m%d)" >> $GITHUB_OUTPUT
 
-      - name: 读取源链接并生成新链接
+      - name: 生成带补零控制的链接
         run: |
-          # 清空目标文件
           > many-daily-clash-nodes-latest
-          
-          # 逐行读取源链接
-          while IFS= read -r line || [ -n "$line" ]; do
-            # 跳过空行
-            if [ -z "$line" ]; then
+          while IFS=' ' read -r base month_pad day_pad || [ -n "$base" ]; do
+            if [[ -z "$base" || "$base" == \#* ]]; then
               continue
             fi
-            
-            # 拼接生成当天的 YAML 链接
-            new_link="${line}/${{ steps.date.outputs.year }}/${{ steps.date.outputs.month }}/${{ steps.date.outputs.full }}.yaml"
-            
-            # 写入目标文件
-            echo "$new_link" >> many-daily-clash-nodes-latest
+
+            # 选择月份
+            if [ "$month_pad" = "1" ]; then
+              m=${{ steps.date.outputs.month_zero }}
+            else
+              m=${{ steps.date.outputs.month_nozero }}
+            fi
+
+            # 选择日期
+            if [ "$day_pad" = "1" ]; then
+              d=${{ steps.date.outputs.day_zero }}
+            else
+              d=${{ steps.date.outputs.day_nozero }}
+            fi
+
+            # 拼接链接
+            echo "${base}/${{ steps.date.outputs.year }}/${m}/${{ steps.date.outputs.full }}.yaml" >> many-daily-clash-nodes-latest
           done < daily-source.list
 
-      - name: 提交并推送修改
+      - name: 提交更新
         uses: EndBug/add-and-commit@v9
         with:
-          message: '🤖 自动更新每日节点链接'
+          message: '🤖 自动更新每日节点（带补零控制）'
           add: 'many-daily-clash-nodes-latest'
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
