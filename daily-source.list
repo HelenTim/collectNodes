@@ -1,4 +1,4 @@
 https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{month}/{year}{month}{day}.yaml
-https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{0-month}/{year}{0-month}{0day}.yaml
-https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{0-month}/{0day}/{year}{0-month}{0day}.yaml
-https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{0-month}/{day}/{year}{0-month}{0day}.yaml
+https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{0-month}/{year}{0-month}{0-day}.yaml
+https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{0-month}/{0day}/{year}{0-month}{0-day}.yaml
+https://sfdr.zaixianyouxi.dpdns.org/uploads/{year}/{0-month}/{day}/{year}{0-month}{0-day}.yaml
