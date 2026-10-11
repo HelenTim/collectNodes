@@ -26,20 +26,34 @@ dns:
 proxies:
   - name: 美国(海外账号:shop.tgaaaa.co)
     type: vless
-    server: 146.56.221.148
-    port: 8443
-    uuid: d342d11e-d224-4463-b982-532309285094
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
-    servername: ccc.010304.xyz
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 154.31.112.237
+    port: 26418
+    uuid: ab2a5cc0-11d1-4bc4-a9d4-b5654ad18dc4
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     tls: true
     client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: /@Marisa_kristi
       headers:
-        Host: ccc.010304.xyz
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     skip-cert-verify: true
     udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)
+  - name: 美国(海外账号:shop.tgaaaa.co)_1
     type: vless
     server: saas.sin.fan
     port: 443
@@ -48,36 +62,47 @@ proxies:
     servername: snip.edgeoneai.cc.cd
     tls: true
     ws-opts:
-      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
       headers:
         Host: snip.edgeoneai.cc.cd
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_1
+  - name: 美国(海外账号:shop.tgaaaa.co)_2
     type: vless
-    server: www.5h.com
+    server: saas.sin.fan
     port: 443
-    uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
-    servername: youxuanku.kdns.fr
+    servername: snip.edgeoneai.cc.cd
     tls: true
     client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: youxuanku.kdns.fr
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
     skip-cert-verify: true
     udp: true
-  - name: 新加坡(海外账号:shop.tgaaaa.co)
-    type: anytls
-    server: l3hl4mwo.zf-mix.9999231.xyz
-    port: 1001
-    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
-    sni: tw01.9999231.xyz
-    skip-cert-verify: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_3
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
     tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_2
+  - name: 美国(海外账号:shop.tgaaaa.co)_4
     type: vless
     server: saas.sin.fan
     port: 443
@@ -95,7 +120,36 @@ proxies:
       - h2
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_3
+  - name: 新加坡(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 175.41.179.37
+    port: 51262
+    uuid: 6c6ea474-0cf5-4a3d-bc81-aa2eeb6516d6
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_5
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_6
     type: vless
     server: saas.sin.fan
     port: 443
@@ -107,104 +161,231 @@ proxies:
       path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
       headers:
         Host: snip.edgeoneai.cc.cd
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_4
-    type: vless
-    server: dey.lnmarketplace.net
-    port: 443
-    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-    network: xhttp
-    servername: dey.lnmarketplace.net
-    tls: true
     alpn:
+      - h3
       - h2
-    xhttp-opts:
-      path: /kavir
-      host: dey.lnmarketplace.net
-      mode: stream-one
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_5
+  - name: 美国(海外账号:shop.tgaaaa.co)_7
     type: vless
-    server: dey.lnmarketplace.net
+    server: saas.sin.fan
     port: 443
-    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-    network: xhttp
-    servername: dey.lnmarketplace.net
-    tls: true
-    client-fingerprint: firefox
-    alpn:
-      - h2
-    xhttp-opts:
-      path: /kavir
-      host: dey.lnmarketplace.net
-      mode: stream-one
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_6
-    type: vless
-    server: dey.lnmarketplace.net
-    port: 443
-    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-    network: xhttp
-    servername: dey.lnmarketplace.net
-    tls: true
-    alpn:
-      - h2
-    xhttp-opts:
-      path: /kavir
-      host: dey.lnmarketplace.net
-      mode: stream-one
-    skip-cert-verify: true
-    udp: true
-  - name: 香港(海外账号:shop.tgaaaa.co)
-    type: vless
-    server: dey.lnmarketplace.net
-    port: 443
-    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-    network: xhttp
-    servername: dey.lnmarketplace.net
-    tls: true
-    client-fingerprint: firefox
-    alpn:
-      - h2
-    xhttp-opts:
-      path: /kavir
-      host: dey.lnmarketplace.net
-      mode: stream-one
-    skip-cert-verify: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_1
-    type: vless
-    server: 172.66.0.230
-    port: 2083
-    uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
-    servername: helloapps.cc.cd
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_1
+    type: anytls
+    server: l3hl4mwo.zf-mix.9999231.xyz
+    port: 1001
+    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+    sni: tw01.9999231.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_8
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_2
+    type: vless
+    server: 161.33.37.121
+    port: 443
+    uuid: fea92fee-3202-43bf-bca5-ff06db0f95c0
+    servername: www.cloudflare.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: zRYILDpfkddIbXYu10kE3d-NouoDNvQR_Rq9UPx-lyM
+      short-id: ed9e79c488173f57
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_9
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_10
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 德国(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 188.245.191.19
+    port: 2040
+    uuid: bdd897a6-57f2-4311-835f-0b6c5ac5a1a2
+    network: ws
+    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 德国(海外账号:shop.tgaaaa.co)_1
+    type: vless
+    server: 188.245.191.19
+    port: 2040
+    uuid: d30ba47d-596b-4087-9fa6-a2c9bf4dbe1d
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_11
+    type: vless
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 德国(海外账号:shop.tgaaaa.co)_2
+    type: vless
+    server: 5.75.195.83
+    port: 56879
+    uuid: 7b0f8733-03cc-472b-9c50-ed159b48ef59
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_12
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_3
+    type: vless
+    server: 141.147.150.232
+    port: 443
+    uuid: bf6f8771-654f-4072-a1c9-dadb3b36da56
+    servername: www.cloudflare.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: FE18081Cm-WUzpu6JyGpmlJqHEZpDmeWCAcisuRKtX4
+      short-id: e295fe30ac8e9c41
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 209.206.51.240
+    port: 443
+    uuid: 573c6482-37db-454a-8c31-5b45a338a580
+    network: ws
+    servername: and-75r.pages.dev
     tls: true
     client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: helloapps.cc.cd
+        Host: and-75r.pages.dev
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_7
+  - name: 德国(海外账号:shop.tgaaaa.co)_3
     type: vless
-    server: 129.211.188.184
-    port: 8443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    server: 178.105.133.160
+    port: 4443
+    uuid: fb0818b3-4031-4843-b5f7-1d75177a1758
     network: ws
-    servername: jp3.yohototo.top
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     tls: true
+    client-fingerprint: chrome
     ws-opts:
-      path: /tyxyws
+      path: /@Marisa_kristi
       headers:
-        Host: jp3.yohototo.top
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     skip-cert-verify: true
     udp: true
-  - name: 荷兰(海外账号:shop.tgaaaa.co)
+  - name: 美国(海外账号:shop.tgaaaa.co)_13
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_14
     type: vless
     server: dey.lnmarketplace.net
     port: 443
@@ -221,19 +402,304 @@ proxies:
       mode: stream-one
     skip-cert-verify: true
     udp: true
-  - name: 香港(海外账号:shop.tgaaaa.co)_1
+  - name: 美国(海外账号:shop.tgaaaa.co)_15
     type: vless
-    server: 129.211.188.184
-    port: 8443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
-    servername: jp3.yohototo.top
+    servername: snip.edgeoneai.cc.cd
     tls: true
-    client-fingerprint: unsafe
+    client-fingerprint: chrome
     ws-opts:
-      path: /tyxyws
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
       headers:
-        Host: jp3.yohototo.top
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_16
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_17
+    type: vless
+    server: 216.24.57.1
+    port: 443
+    uuid: 974c2588-c1cd-43ac-8823-ce3d879b09fd
+    network: ws
+    servername: somersby.pt.ex33r.eu.cc
+    tls: true
+    ws-opts:
+      path: /id-amz
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_18
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_19
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_20
+    type: vless
+    server: jp64.australiacaregroup.site
+    port: 10002
+    uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+    servername: jp64.australiacaregroup.site
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_21
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 英国(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 57.129.130.34
+    port: 52014
+    uuid: 53367702-4b8d-431a-a193-34d7d057a065
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 79.137.197.212
+    port: 2105
+    uuid: 663c0d65-f2bc-43f3-b329-1a4e2b781d44
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡(海外账号:shop.tgaaaa.co)_1
+    type: vless
+    server: 142.91.101.39
+    port: 627
+    uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
+    network: ws
+    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_22
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 英国(海外账号:shop.tgaaaa.co)_1
+    type: vless
+    server: 89.117.112.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime11.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_23
+    type: vless
+    server: 209.206.51.240
+    port: 443
+    uuid: 573c6482-37db-454a-8c31-5b45a338a580
+    network: ws
+    servername: and-75r.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 185.153.198.86
+    port: 443
+    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+    network: ws
+    servername: vlso5.1d.mom
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /socks5=888:888@hkip.1d.mom:1080
+      headers:
+        Host: vlso5.1d.mom
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_24
+    type: anytls
+    server: anytls2.864106.xyz
+    port: 19000
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: anytls2.864106.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_25
+    type: vless
+    server: 156.229.163.237
+    port: 10238
+    uuid: f97f81df-edac-47b6-badb-316125e61bfb
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_4
+    type: vless
+    server: 107.191.53.86
+    port: 4798
+    uuid: 16a5e4f6-246f-406d-9787-1b5686a97cbc
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡(海外账号:shop.tgaaaa.co)_2
+    type: vless
+    server: 142.91.101.39
+    port: 627
+    uuid: 8199228b-e84b-42a2-9268-e400391e483a
+    network: ws
+    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_26
+    type: vless
+    server: 80.93.202.40
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime02.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_27
+    type: vless
+    server: 91.206.71.8
+    port: 80
+    uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
+    network: ws
+    tls: false
+    ws-opts:
+      path: /pyip=Telegram🇨🇳 @WangCai2
+      headers:
+        Host: round-haze-8783.294.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_28
+    type: vless
+    server: 91.206.71.8
+    port: 80
+    uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
+    network: ws
+    tls: false
+    ws-opts:
+      path: /pyip=Telegram🇨🇳+@WangCai2
+      headers:
+        Host: round-haze-8783.294.workers.dev
     skip-cert-verify: true
     udp: true
   - name: 荷兰(海外账号:shop.tgaaaa.co)_1
@@ -253,38 +719,9 @@ proxies:
       mode: stream-one
     skip-cert-verify: true
     udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)
+  - name: 美国(海外账号:shop.tgaaaa.co)_29
     type: vless
-    server: 188.245.191.19
-    port: 2040
-    uuid: bdd897a6-57f2-4311-835f-0b6c5ac5a1a2
-    network: ws
-    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 西班牙(海外账号:shop.tgaaaa.co)
-    type: vless
-    server: 195.170.172.139
-    port: 57667
-    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-    servername: u695098u6b6f0dd0s2057.gogocs.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    alpn:
-      - h2
-      - http/1.1
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_8
-    type: vless
-    server: 63.141.128.30
+    server: 92.53.189.40
     port: 8880
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
@@ -292,137 +729,81 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: vms.lifetime42.workers.dev
+        Host: vms.lifetime19.workers.dev
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_9
+  - name: 印度(海外账号:shop.tgaaaa.co)
     type: vless
-    server: 104.17.21.32
-    port: 8880
-    uuid: 6e5270b6-9f28-4bc6-8a41-9c197f33f4bb
-    network: ws
-    tls: false
-    ws-opts:
-      path: /pyip=ProxyIP.SG.CMLiussss.net
-      headers:
-        Host: autumn-dawn-fa6b.337-272.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_2
-    type: vless
-    server: 209.206.51.240
+    server: 203.202.232.110
     port: 443
-    uuid: 573c6482-37db-454a-8c31-5b45a338a580
+    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
     network: ws
-    servername: and-75r.pages.dev
+    servername: vlso5.1d.mom
     tls: true
     client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: /socks5=888:888@hkip.1d.mom:1080
       headers:
-        Host: and-75r.pages.dev
+        Host: vlso5.1d.mom
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_10
+  - name: 日本(海外账号:shop.tgaaaa.co)_5
     type: vless
-    server: 91.206.71.8
-    port: 80
-    uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
-    network: ws
-    tls: false
-    ws-opts:
-      path: /pyip=Telegram🇨🇳 @WangCai2
-      headers:
-        Host: round-haze-8783.294.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_11
-    type: vless
-    server: 172.67.79.160
-    port: 2087
-    uuid: a4a951b9-901d-4db8-8a7d-6df82c4b5c23
-    network: ws
-    servername: cvhpyn.pages.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: cvhpyn.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 法国(海外账号:shop.tgaaaa.co)
-    type: vless
-    server: 103.116.7.100
-    port: 2087
-    uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-    network: ws
-    servername: proxy-1cu.pages.dev
-    tls: true
-    client-fingerprint: android
-    ws-opts:
-      path: /
-      headers:
-        Host: proxy-1cu.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_12
-    type: vless
-    server: 209.206.51.240
-    port: 443
-    uuid: 573c6482-37db-454a-8c31-5b45a338a580
-    network: ws
-    servername: and-75r.pages.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_13
-    type: vless
-    server: c5fl8w.api-gate.org
-    port: 443
-    uuid: e75ad2eb-6c1f-45ce-8023-f5f10875df66
-    servername: ca9.eu-cdn294.com
+    server: 141.147.150.232
+    port: 2053
+    uuid: fa13a9f7-5cba-4dca-b6b7-c14953f0ac65
+    servername: www.cloudflare.com
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     reality-opts:
-      public-key: B1g2P-3yW3cQW0WZweSPKUP3lZSQ5pgr8doCYvA0cRg
-      short-id: df3dc12b0b9b0c93
+      public-key: FE18081Cm-WUzpu6JyGpmlJqHEZpDmeWCAcisuRKtX4
+      short-id: 2235c8526bc59d67
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_14
+  - name: 美国(海外账号:shop.tgaaaa.co)_30
     type: vless
-    server: 104.21.70.21
-    port: 8080
-    uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
+    server: 104.26.4.2
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
     network: ws
-    tls: false
+    servername: ccc.010304.xyz
+    tls: true
+    client-fingerprint: chrome
     ws-opts:
-      path: /rN50nmm9L1DeY73C?ed=2560
-      headers:
-        Host: lucky-lab-ac6d.caveyi8071.workers.dev
+      path: /
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_15
+  - name: 荷兰(海外账号:shop.tgaaaa.co)_2
     type: vless
-    server: 172.67.203.138
-    port: 8080
-    uuid: 015fada5-2c95-4251-9c58-39fa3abf1e24
+    server: 157.228.150.34
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_31
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
-    servername: 172.67.203.138
-    tls: false
+    servername: snip.edgeoneai.cc.cd
+    tls: true
     ws-opts:
-      path: /eyJqdW5rIjoidzY2QTdySkdOeiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chromefp=chrome
       headers:
-        Host: server17.peekconfig1.workers.dev
+        Host: snip.edgeoneai.cc.cd
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_16
+  - name: 美国(海外账号:shop.tgaaaa.co)_32
     type: vless
-    server: 157.228.128.59
+    server: 157.228.160.166
     port: 443
     uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
     servername: addons.mozilla.org
@@ -430,265 +811,58 @@ proxies:
     flow: xtls-rprx-vision
     client-fingerprint: randomized
     reality-opts:
-      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
-      short-id: 06e00e7c
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_17
-    type: trojan
-    server: www.wto.org
-    port: 8443
-    password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
-    sni: jiangjc.pages.dev
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_1
+  - name: 香港(海外账号:shop.tgaaaa.co)
     type: vless
-    server: 163.245.52.91
+    server: dey.lnmarketplace.net
     port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
     tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_18
-    type: trojan
-    server: www.wto.org
-    port: 8443
-    password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
-    sni: jiangjc.pages.dev
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-      headers:
-        Host: jiangjc.pages.dev
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_19
-    type: anytls
-    server: anytls2.864106.xyz
-    port: 19000
-    password: github.com/Alvin9999-newpac/fanqiang
-    sni: anytls2.864106.xyz
-    skip-cert-verify: true
-    tls: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_3
-    type: vless
-    server: 188.164.248.48
-    port: 2083
-    uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
-    network: ws
-    servername: helloapps.cc.cd
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: helloapps.cc.cd
-    skip-cert-verify: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_4
-    type: vless
-    server: 49.238.238.156
-    port: 2096
-    uuid: 573c6482-37db-454a-8c31-5b45a338a580
-    network: ws
-    servername: and-75r.pages.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: and-75r.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_5
-    type: vless
-    server: 49.238.238.154
-    port: 2053
-    uuid: 573c6482-37db-454a-8c31-5b45a338a580
-    network: ws
-    servername: and-75r.pages.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: and-75r.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_6
-    type: vless
-    server: 27.50.48.142
-    port: 2083
-    uuid: 573c6482-37db-454a-8c31-5b45a338a580
-    network: ws
-    servername: and-75r.pages.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: and-75r.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 新加坡(海外账号:shop.tgaaaa.co)_1
-    type: vless
-    server: 142.91.101.39
-    port: 627
-    uuid: 8199228b-e84b-42a2-9268-e400391e483a
-    network: ws
-    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 新加坡(海外账号:shop.tgaaaa.co)_2
-    type: vless
-    server: 142.91.101.39
-    port: 627
-    uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
-    network: ws
-    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_20
-    type: trojan
-    server: 188.114.97.9
-    port: 443
-    password: TsX0XJKMa2h$CbKr0k
-    sni: IDB8onmVBntUyt5T7T6cEjFW8VLRB.PAGES.DeV
-    skip-cert-verify: true
-    ws-opts:
-      path: /tr/mPwnfIHtx0vldKy0A5AGJTZBhttp/1.1
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_21
-    type: vless
-    server: 157.228.128.59
-    port: 443
-    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-    servername: addons.mozilla.org
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
-      short-id: 06e00e7c
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_22
-    type: vless
-    server: 104.21.70.21
-    port: 443
-    uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-    network: ws
-    servername: a.cwvps.eu.org
-    tls: true
-    client-fingerprint: unsafe
-    ws-opts:
-      path: /ws
-    skip-cert-verify: true
-    udp: true
-  - name: 加拿大(海外账号:shop.tgaaaa.co)_7
-    type: vless
-    server: 172.67.69.86
-    port: 2083
-    uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
-    network: ws
-    servername: helloapps.cc.cd
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: helloapps.cc.cd
-    skip-cert-verify: true
-    udp: true
-  - name: 香港(海外账号:shop.tgaaaa.co)_2
-    type: vless
-    server: liang92.dpdns.org
-    port: 443
-    uuid: 0aab6adc-104c-4339-8d25-09755ffe2cbd
-    network: ws
-    tls: true
-    ws-opts:
-      path: /
-    skip-cert-verify: true
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_2
-    type: vless
-    server: 163.245.52.91
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
-    skip-cert-verify: true
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_3
-    type: vless
-    server: 163.245.52.91
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
     client-fingerprint: firefox
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_23
+  - name: 美国(海外账号:shop.tgaaaa.co)_33
     type: vless
-    server: envato.com
-    port: 8880
-    uuid: baaa882d-ac50-4bba-bd8d-5486f7d34005
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: blue-water-924c.174-235.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_24
-    type: vless
-    server: 185.148.104.30
+    server: 155.46.167.30
     port: 8880
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
-    servername: 185.148.104.30
     tls: false
-    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: vms.lifetime51.workers.dev
+        Host: vms.lifetime50.workers.dev
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_25
+  - name: 荷兰(海外账号:shop.tgaaaa.co)_3
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    client-fingerprint: firefox
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_34
     type: vless
     server: 45.131.208.4
     port: 80
@@ -703,222 +877,139 @@ proxies:
         Host: floral-thunder-10d3.82-67d.workers.dev
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_26
-    type: vless
-    server: 163.245.52.91
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_27
-    type: vless
-    server: 80.93.202.40
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime02.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_4
-    type: vless
-    server: 163.245.52.91
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: safari
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_28
-    type: vless
-    server: 155.46.167.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime50.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_29
-    type: vless
-    server: 104.21.0.115
-    port: 8880
-    uuid: 8995976a-1c81-4b44-a414-d3bc71058a21
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: muddy-queen-cdda.181-cf9.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_30
-    type: vless
-    server: 104.16.72.41
-    port: 8880
-    uuid: 28201cd6-c2a9-4703-a31b-eaf31ecb18fd
-    network: ws
-    servername: summer-butterfly-cbc8.26-971.workers.dev
-    tls: false
-    ws-opts:
-      path: /pyip
-      headers:
-        Host: summer-butterfly-cbc8.26-971.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_31
-    type: vless
-    server: 213.111.148.137
-    port: 443
-    uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-    network: ws
-    servername: proxy-1cu.pages.dev
-    tls: true
-    client-fingerprint: android
-    ws-opts:
-      path: /
-      headers:
-        Host: proxy-1cu.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_32
-    type: vless
-    server: 104.21.56.90
-    port: 80
-    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
-    network: ws
-    servername: 104.21.56.90
-    tls: false
-    ws-opts:
-      path: /vl/2INL39K32mKsOBKt?ed=2560
-      headers:
-        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_33
-    type: vless
-    server: 104.21.56.90
-    port: 80
-    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
-    network: ws
-    servername: 104.21.56.90
-    tls: false
-    client-fingerprint: chrome
-    ws-opts:
-      path: /vl/2INL39K32mKsOBKt?ed=2560
-      headers:
-        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 日本(海外账号:shop.tgaaaa.co)
-    type: vless
-    server: 152.69.199.75
-    port: 443
-    uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-    network: ws
-    servername: proxy-1cu.pages.dev
-    tls: true
-    client-fingerprint: android
-    ws-opts:
-      path: /
-      headers:
-        Host: proxy-1cu.pages.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_34
-    type: vless
-    server: 91.206.71.8
-    port: 80
-    uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
-    network: ws
-    tls: false
-    ws-opts:
-      path: /pyip=Telegram🇨🇳+@WangCai2
-      headers:
-        Host: round-haze-8783.294.workers.dev
-    skip-cert-verify: true
-    udp: true
   - name: 美国(海外账号:shop.tgaaaa.co)_35
     type: vless
-    server: saas.sin.fan
+    server: 172.67.171.191
+    port: 8080
+    uuid: 0b2ea024-3ffd-46a7-87ce-86cbb79d7a48
+    network: ws
+    tls: false
+    ws-opts:
+      path: /eyJqdW5rIjoiT3FNeW1sMVdGVHlvNTIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+      headers:
+        Host: server18.peekconfig2.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_36
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_37
+    type: vless
+    server: 162.159.130.234
     port: 443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
     servername: snip.edgeoneai.cc.cd
     tls: true
+    client-fingerprint: chrome
     ws-opts:
-      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
       headers:
         Host: snip.edgeoneai.cc.cd
-    alpn:
-      - h3
-      - h2
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_36
-    type: vless
-    server: 172.67.183.52
-    port: 80
-    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
-    network: ws
-    servername: 172.67.183.52
-    tls: false
-    ws-opts:
-      path: /vl/2INL39K32mKsOBKt?ed=2560
-      headers:
-        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_37
-    type: vless
-    server: de2.srv.vbuste.ru
+  - name: 台湾(海外账号:shop.tgaaaa.co)
+    type: anytls
+    server: 98416548.df6h451rh.xin
     port: 443
-    uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
-    servername: de2.srv.vbuste.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
-      short-id: 4be4110078ebed4a
+    password: 6725d134ee80
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
     skip-cert-verify: true
+    tls: true
     udp: true
+    client-fingerprint: chrome
   - name: 美国(海外账号:shop.tgaaaa.co)_38
     type: vless
-    server: 172.67.183.52
-    port: 80
-    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
-    network: ws
-    servername: 172.67.183.52
+    server: 31.59.210.25
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: KDBhxT2YMtMjDEC9VdoDEISdCwxd6KFrSE8uyUaHcTY
+      short-id: ed435c242097fd05
+    skip-cert-verify: true
+    udp: true
+  - name: 芬兰(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: test.keoplentuio.xyz
+    port: 2053
+    uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
     tls: false
-    client-fingerprint: chrome
-    ws-opts:
-      path: /vl/2INL39K32mKsOBKt?ed=2560
-      headers:
-        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
     skip-cert-verify: true
     udp: true
   - name: 美国(海外账号:shop.tgaaaa.co)_39
     type: vless
-    server: de2.srv.vbuste.ru
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 芬兰(海外账号:shop.tgaaaa.co)_1
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 英国(海外账号:shop.tgaaaa.co)_2
+    type: vless
+    server: 129.151.64.169
+    port: 31867
+    uuid: adeb038d-f011-4733-b133-3791e76950f7
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_40
+    type: anytls
+    server: jp2.australiacaregroup.site
+    port: 10005
+    password: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 德国(海外账号:shop.tgaaaa.co)_4
+    type: vless
+    server: 177.1.187.251
     port: 443
     uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
     servername: de2.srv.vbuste.ru
@@ -930,7 +1021,7 @@ proxies:
       short-id: 4be4110078ebed4a
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_40
+  - name: 美国(海外账号:shop.tgaaaa.co)_41
     type: vless
     server: 157.228.150.34
     port: 443
@@ -944,154 +1035,182 @@ proxies:
       short-id: 3cef317b
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_41
-    type: vless
-    server: 163.245.52.91
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
-    skip-cert-verify: true
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_5
-    type: vless
-    server: 163.245.52.91
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-ee1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-      short-id: ad6e08b22389abd2
-    skip-cert-verify: true
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_6
-    type: vless
-    server: 31.77.109.35
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-de1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY
-      short-id: 494afdc75f8c2fa8
-    skip-cert-verify: true
-    udp: true
   - name: 美国(海外账号:shop.tgaaaa.co)_42
     type: vless
-    server: de2.srv.vbuste.ru
+    server: 157.228.160.166
     port: 443
-    uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
-    servername: de2.srv.vbuste.ru
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: randomized
     reality-opts:
-      public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
-      short-id: 4be4110078ebed4a
-    skip-cert-verify: true
-    udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_7
-    type: vless
-    server: 31.77.109.35
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-de1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY
-      short-id: 494afdc75f8c2fa8
-    skip-cert-verify: true
-    udp: true
-  - name: 英国(海外账号:shop.tgaaaa.co)
-    type: vless
-    server: 2.28.142.170
-    port: 443
-    uuid: f774f037-6320-42e3-a97b-6d4a1f018dd5
-    encryption: mlkem768x25519plus.native.0rtt.Y0-j5e-CpehUKzhEeat1dTYevroKyHV4g9HML3ujmlQ
-    network: xhttp
-    servername: germanytest.tulnaro.ir
-    tls: true
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: IqFTx4k5VQydmffvavaOHDXBtdgDxX26A6NtsVvDfhw
-      short-id: d485c3d5248d6b51
-    xhttp-opts:
-      path: /
-      host: germanytest.tulnaro.ir
-      mode: auto
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
     skip-cert-verify: true
     udp: true
   - name: 美国(海外账号:shop.tgaaaa.co)_43
     type: vless
-    server: 150.241.80.113
+    server: 157.228.128.59
     port: 443
-    uuid: 86037609-3790-4901-bd2f-c698092fb1fc
-    servername: nl.skfv-mirror.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: safari
-    reality-opts:
-      public-key: qmfrMwVYth3lsYuv7qfr22YlTIlNtVjMl0v4Z5pX7hM
-      short-id: 87cc0414902bee2d
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_44
-    type: vless
-    server: 155.212.187.222
-    port: 8451
     uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
     servername: addons.mozilla.org
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg
-      short-id: 5ea112e8
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
     skip-cert-verify: true
     udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_8
+  - name: 美国(海外账号:shop.tgaaaa.co)_44
     type: vless
-    server: 31.77.109.35
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-de1.cloud-cdn.xyz
+    server: milo.rubinaz.xyz
+    port: 8080
+    uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯(海外账号:shop.tgaaaa.co)_1
+    type: vless
+    server: 194.226.121.119
+    port: 2087
+    uuid: ec6f8131-7a5d-4117-9627-6fb2b39ae0da
+    network: grpc
+    servername: www.apple.com
     tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: ios
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
     reality-opts:
-      public-key: SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY
-      short-id: 494afdc75f8c2fa8
+      public-key: sXOLkj_L8EpGL0yZA9laLDaPfpwVEcBVHLSvunPVQwA
+      short-id: a644f94155c87551
     skip-cert-verify: true
     udp: true
-  - name: 德国(海外账号:shop.tgaaaa.co)_9
+  - name: 荷兰(海外账号:shop.tgaaaa.co)_4
     type: vless
-    server: 31.77.109.35
+    server: 157.228.150.34
     port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-de1.cloud-cdn.xyz
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY
-      short-id: 494afdc75f8c2fa8
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
     skip-cert-verify: true
     udp: true
-  - name: 俄罗斯(海外账号:shop.tgaaaa.co)
+  - name: 英国(海外账号:shop.tgaaaa.co)_3
     type: vless
-    server: 94.154.128.132
+    server: 157.228.160.166
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: 芬兰(海外账号:shop.tgaaaa.co)_2
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_45
+    type: vless
+    server: 192.227.169.125
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u764943ccs478.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯(海外账号:shop.tgaaaa.co)_2
+    type: vless
+    server: 31.59.210.26
+    port: 2088
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg
+      short-id: b1ad165f903c62fe
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰(海外账号:shop.tgaaaa.co)_5
+    type: vless
+    server: 144.31.135.38
+    port: 9444
+    uuid: 9a48995b-dd98-40a4-98cb-5fbb270f3d63
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 芬兰(海外账号:shop.tgaaaa.co)_3
+    type: vless
+    server: 95.111.212.241
+    port: 443
+    uuid: 924fe46b-b6e0-479e-ae7f-a3661680e706
+    servername: www.samsung.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BSTnEthBXhb_UyuWpLBDxg82-C-wcpU2_kOD5ohS12g
+      short-id: 3a697adb4c58d495
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_46
+    type: trojan
+    server: 104.18.32.47
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_6
+    type: anytls
+    server: q7mtpgxo.zf-mix.9999231.xyz
+    port: 1019
+    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+    sni: pl-house.9999231.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国(海外账号:shop.tgaaaa.co)_47
+    type: vless
+    server: 213.111.177.107
     port: 443
     uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
     network: ws
@@ -1104,134 +1223,281 @@ proxies:
         Host: vlso5.1d.mom
     skip-cert-verify: true
     udp: true
-  - name: 荷兰(海外账号:shop.tgaaaa.co)_2
+  - name: 美国(海外账号:shop.tgaaaa.co)_48
+    type: vmess
+    server: or3.sfacg.uk
+    port: 2083
+    uuid: ac251237-576f-40c8-a543-554960c958b1
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cdn.sfacg.uk
+    network: ws
+    ws-opts:
+      path: /or3
+      headers:
+        Host: or3.sfacg.uk
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_49
+    type: trojan
+    server: 104.18.32.47
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.calmlunch.com
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_7
+    type: anytls
+    server: 06nn6kxv.zf-mix.9999231.xyz
+    port: 1020
+    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+    sni: se-house.9999231.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国(海外账号:shop.tgaaaa.co)_50
     type: vless
-    server: 157.228.150.34
+    server: 13.143.137.206
+    port: 8443
+    uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+    servername: ya.ru
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+      short-id: d2061bb1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_51
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: safari
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_52
+    type: vless
+    server: 31.59.210.37
+    port: 443
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: safari
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+      short-id: 6dbf4931096f9890
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_53
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 德国(海外账号:shop.tgaaaa.co)_5
+    type: vless
+    server: 179.61.251.244
+    port: 7443
+    uuid: 635e8406-9253-4444-88a2-dad1f0826034
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_54
+    type: vless
+    server: 139.84.242.103
+    port: 443
+    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+    network: ws
+    servername: vlso5.1d.mom
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /socks5=888:888@hkip.1d.mom:1080
+      headers:
+        Host: vlso5.1d.mom
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_55
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: edge
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_56
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: ios
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_8
+    type: anytls
+    server: q7mtpgxo.zf-mix.9999231.xyz
+    port: 1019
+    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+    sni: pl-house.9999231.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_57
+    type: vless
+    server: 31.59.210.37
+    port: 443
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: qq
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+      short-id: 6dbf4931096f9890
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_58
+    type: vless
+    server: 31.59.210.37
+    port: 443
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: edge
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+      short-id: 6dbf4931096f9890
+    skip-cert-verify: true
+    udp: true
+  - name: 美国(海外账号:shop.tgaaaa.co)_59
+    type: vless
+    server: 157.228.160.166
     port: 443
     uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
     servername: addons.mozilla.org
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: chrome
+    client-fingerprint: randomized
     reality-opts:
       public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
       short-id: 3cef317b
     skip-cert-verify: true
     udp: true
-  - name: 英国(海外账号:shop.tgaaaa.co)_1
+  - name: 美国(海外账号:shop.tgaaaa.co)_60
     type: vless
-    server: 31.77.109.35
-    port: 443
-    uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-    servername: d3-de1.cloud-cdn.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY
-      short-id: 494afdc75f8c2fa8
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_45
-    type: vless
-    server: 62.105.220.106
-    port: 443
-    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-    servername: u695098u7dae9c0cs220.gogocs.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    alpn:
-      - h2
-      - http/1.1
-    skip-cert-verify: true
-    udp: true
-  - name: 澳洲(海外账号:shop.tgaaaa.co)
-    type: vless
-    server: 103.43.75.82
-    port: 443
-    uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+    server: 156.38.157.171
+    port: 8443
+    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
     network: ws
-    servername: proxy-1cu.pages.dev
+    servername: vlso5.1d.mom
     tls: true
-    client-fingerprint: android
+    client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: /socks5=888:888@hkip.1d.mom:1080
       headers:
-        Host: proxy-1cu.pages.dev
+        Host: vlso5.1d.mom
     skip-cert-verify: true
     udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_46
+  - name: 美国(海外账号:shop.tgaaaa.co)_61
     type: vless
-    server: pl-waw.dontblockmepls.com
-    port: 2063
-    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    servername: rusbid.de
+    server: 31.59.210.37
+    port: 443
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+      short-id: 6dbf4931096f9890
+    skip-cert-verify: true
+    udp: true
+  - name: 韩国(海外账号:shop.tgaaaa.co)
+    type: vless
+    server: 220.71.172.2
+    port: 16034
+    uuid: bfa5cd1f-1465-4850-b7c9-08e1a63dac2c
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 日本(海外账号:shop.tgaaaa.co)_9
+    type: vless
+    server: 158.179.191.37
+    port: 443
+    uuid: 53f1e11a-2b55-43f0-953f-d44c5fba92b6
+    servername: www.apple.com
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+      public-key: DbiBFFM_s7eBSN20U4fxvliZdcBfV2_41T_PWX2mrj0
+      short-id: 708f353722c36d17
     skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_47
-    type: vless
-    server: 198.12.124.74
-    port: 10829
-    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-    servername: u695098u5e20ed1cs709.gogocs.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    alpn:
-      - h2
-      - http/1.1
-    skip-cert-verify: true
-    udp: true
-  - name: 荷兰(海外账号:shop.tgaaaa.co)_3
-    type: vless
-    server: 62.105.220.106
-    port: 443
-    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-    servername: u695098u7dae9c0cs220.gogocs.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_48
-    type: vless
-    server: jrnkkm.de5.net
-    port: 2083
-    uuid: d1f68cb6-bfab-4c14-b1c8-f58d047d00e3
-    network: ws
-    servername: jrnkkm.de5.net
-    tls: true
-    ws-opts:
-      path: /ws
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_49
-    type: vless
-    server: 8.47.69.0
-    port: 2053
-    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-    network: ws
-    servername: vless.api-music-fa.com
-    tls: true
-    ws-opts:
-      path: /api/voip/updates/static/fr2035
-      headers:
-        Host: fr.api-music-fa.com
-    skip-cert-verify: true
-    udp: true
-  - name: 美国(海外账号:shop.tgaaaa.co)_50
-    type: anytls
-    server: nv50244o.zf-mix.9999231.xyz
-    port: 1043
-    password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
-    sni: pe-wy.9999231.xyz
-    skip-cert-verify: true
-    tls: true
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -1240,180 +1506,214 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -1424,364 +1724,432 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1805,91 +2173,108 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 美国(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_6
-      - 香港(海外账号:shop.tgaaaa.co)
-      - 加拿大(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_7
-      - 荷兰(海外账号:shop.tgaaaa.co)
-      - 香港(海外账号:shop.tgaaaa.co)_1
-      - 荷兰(海外账号:shop.tgaaaa.co)_1
-      - 德国(海外账号:shop.tgaaaa.co)
-      - 西班牙(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_8
+      - 日本(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_9
-      - 加拿大(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_10
+      - 德国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_11
-      - 法国(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_12
+      - 日本(海外账号:shop.tgaaaa.co)_3
+      - 加拿大(海外账号:shop.tgaaaa.co)
+      - 德国(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_13
       - 美国(海外账号:shop.tgaaaa.co)_14
       - 美国(海外账号:shop.tgaaaa.co)_15
       - 美国(海外账号:shop.tgaaaa.co)_16
       - 美国(海外账号:shop.tgaaaa.co)_17
-      - 德国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_18
       - 美国(海外账号:shop.tgaaaa.co)_19
-      - 加拿大(海外账号:shop.tgaaaa.co)_3
-      - 加拿大(海外账号:shop.tgaaaa.co)_4
-      - 加拿大(海外账号:shop.tgaaaa.co)_5
-      - 加拿大(海外账号:shop.tgaaaa.co)_6
-      - 新加坡(海外账号:shop.tgaaaa.co)_1
-      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_20
       - 美国(海外账号:shop.tgaaaa.co)_21
+      - 英国(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)
+      - 新加坡(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_22
-      - 加拿大(海外账号:shop.tgaaaa.co)_7
-      - 香港(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_2
-      - 德国(海外账号:shop.tgaaaa.co)_3
+      - 英国(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_23
+      - 俄罗斯(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_24
       - 美国(海外账号:shop.tgaaaa.co)_25
+      - 日本(海外账号:shop.tgaaaa.co)_4
+      - 新加坡(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_26
       - 美国(海外账号:shop.tgaaaa.co)_27
-      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_28
+      - 荷兰(海外账号:shop.tgaaaa.co)_1
       - 美国(海外账号:shop.tgaaaa.co)_29
+      - 印度(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_5
       - 美国(海外账号:shop.tgaaaa.co)_30
+      - 荷兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_31
       - 美国(海外账号:shop.tgaaaa.co)_32
+      - 香港(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_33
-      - 日本(海外账号:shop.tgaaaa.co)
+      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_34
       - 美国(海外账号:shop.tgaaaa.co)_35
       - 美国(海外账号:shop.tgaaaa.co)_36
       - 美国(海外账号:shop.tgaaaa.co)_37
+      - 台湾(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_38
+      - 芬兰(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_39
+      - 芬兰(海外账号:shop.tgaaaa.co)_1
+      - 英国(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_40
+      - 德国(海外账号:shop.tgaaaa.co)_4
       - 美国(海外账号:shop.tgaaaa.co)_41
-      - 德国(海外账号:shop.tgaaaa.co)_5
-      - 德国(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_42
-      - 德国(海外账号:shop.tgaaaa.co)_7
-      - 英国(海外账号:shop.tgaaaa.co)
       - 美国(海外账号:shop.tgaaaa.co)_43
       - 美国(海外账号:shop.tgaaaa.co)_44
-      - 德国(海外账号:shop.tgaaaa.co)_8
-      - 德国(海外账号:shop.tgaaaa.co)_9
-      - 俄罗斯(海外账号:shop.tgaaaa.co)
-      - 荷兰(海外账号:shop.tgaaaa.co)_2
-      - 英国(海外账号:shop.tgaaaa.co)_1
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_1
+      - 荷兰(海外账号:shop.tgaaaa.co)_4
+      - 英国(海外账号:shop.tgaaaa.co)_3
+      - 芬兰(海外账号:shop.tgaaaa.co)_2
       - 美国(海外账号:shop.tgaaaa.co)_45
-      - 澳洲(海外账号:shop.tgaaaa.co)
+      - 俄罗斯(海外账号:shop.tgaaaa.co)_2
+      - 荷兰(海外账号:shop.tgaaaa.co)_5
+      - 芬兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_46
+      - 日本(海外账号:shop.tgaaaa.co)_6
       - 美国(海外账号:shop.tgaaaa.co)_47
-      - 荷兰(海外账号:shop.tgaaaa.co)_3
       - 美国(海外账号:shop.tgaaaa.co)_48
       - 美国(海外账号:shop.tgaaaa.co)_49
+      - 日本(海外账号:shop.tgaaaa.co)_7
       - 美国(海外账号:shop.tgaaaa.co)_50
+      - 美国(海外账号:shop.tgaaaa.co)_51
+      - 美国(海外账号:shop.tgaaaa.co)_52
+      - 美国(海外账号:shop.tgaaaa.co)_53
+      - 德国(海外账号:shop.tgaaaa.co)_5
+      - 美国(海外账号:shop.tgaaaa.co)_54
+      - 美国(海外账号:shop.tgaaaa.co)_55
+      - 美国(海外账号:shop.tgaaaa.co)_56
+      - 日本(海外账号:shop.tgaaaa.co)_8
+      - 美国(海外账号:shop.tgaaaa.co)_57
+      - 美国(海外账号:shop.tgaaaa.co)_58
+      - 美国(海外账号:shop.tgaaaa.co)_59
+      - 美国(海外账号:shop.tgaaaa.co)_60
+      - 美国(海外账号:shop.tgaaaa.co)_61
+      - 韩国(海外账号:shop.tgaaaa.co)
+      - 日本(海外账号:shop.tgaaaa.co)_9
 rule-providers:
   LocalAreaNetwork:
     type: http
